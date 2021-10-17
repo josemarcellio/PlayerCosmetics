@@ -1,0 +1,23 @@
+name: PlayerCosmetics
+version: ${project.version}
+main: com.josemarcellio.playercosmetics.Cosmetics
+authors: [ JoseMarcellio ]
+description: PlayerCosmetics plugin
+
+commands:
+  givecosmetic:
+    description: gives a cosmetic
+    usage: /givecosmetic <cosmetic> [online player]
+    permission: cosmetics.givecosmetic
+  refreshcosmetics:
+    description: refreshes cosmetic list and gets updated list from config
+    usage: /refreshcosmetics
+    permission: cosmetics.refresh
+
+permissions:
+  cosmetics.givecosmetic:
+    description: allows givecosmetic
+    default: op
+  cosmetics.refresh:
+    description: allows refreshing the cosmetics list
+    default: op
