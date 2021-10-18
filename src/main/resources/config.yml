@@ -1,26 +1,26 @@
 PlayerCosmetics:
-  Ear:
+  1:
     name: '&eEar Cat'
     material: FEATHER
     modeldata: 12
     lore:
       - ""
       - "&6&nExample"
-  BlackWing:
+  2:
     name: '&eBlack Wing'
     material: FEATHER
     modeldata: 18
     lore:
       - ""
       - "&6&nExample"
-  DragonWing:
+  3:
     name: '&eDragon Wing'
     material: FEATHER
     modeldata: 22
     lore:
       - ""
       - "&6&nExample"
-  Tail:
+  4:
     name: '&eTail'
     material: FEATHER
     modeldata: 20

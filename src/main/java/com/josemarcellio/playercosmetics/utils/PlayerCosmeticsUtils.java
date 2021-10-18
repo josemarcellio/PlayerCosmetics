@@ -1,10 +1,9 @@
-package com.josemarcellio.playercosmetics.util;
+package com.josemarcellio.playercosmetics.utils;
 
-import com.josemarcellio.playercosmetics.Cosmetics;
+import com.josemarcellio.playercosmetics.PlayerCosmetics;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.NamespacedKey;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
@@ -15,7 +14,7 @@ import java.util.List;
 
 import static net.kyori.adventure.text.format.NamedTextColor.YELLOW;
 
-public class Util {
+public class PlayerCosmeticsUtils {
    
    /**
     * Refreshes cosmetics list. Used by RefreshCosmeticsList command
@@ -32,8 +31,8 @@ public class Util {
       
       oldList = new ArrayList<>();
       newList = new ArrayList<>();
-      Cosmetics.getCachedCosmeticList().forEach((Cosmetic csm) -> oldList.add( String.valueOf ( csm.getCosmeticName() ) ));
-      Cosmetics.getCosmeticFactory().getCosmeticsFromConfig().forEach((Cosmetic csm) -> newList.add( String.valueOf ( csm.getCosmeticName() ) ));
+      PlayerCosmetics.getCachedCosmeticList().forEach((Cosmetics csm) -> oldList.add( String.valueOf ( csm.getCosmeticName() ) ));
+      PlayerCosmetics.getCosmeticFactory().getCosmeticsFromConfig().forEach((Cosmetics csm) -> newList.add( String.valueOf ( csm.getCosmeticName() ) ));
       //Horrible.
       
       if(oldList.toArray().length < newList.toArray().length) {
@@ -41,20 +40,21 @@ public class Util {
          differences.removeAll(oldList);
          differencesMessage = Component.text("Cosmetics Reloaded!")
                  .color(TextColor.color(YELLOW));
-      } else {
-         differencesMessage = Component.text("");
-         differences = new ArrayList<>();
+      //} else {
+        // differencesMessage = Component.text("");
+         //differences = new ArrayList<>();
       }
       
-      differencesNames = Component.text("").color(TextColor.color(66,133,255));
-      for (String dif : differences) {
-         differencesNames = differencesNames.append(Component.text(dif+", "));
-      }
+      differencesNames = Component.text("Cosmetics Reloaded!").color(TextColor.color(YELLOW));
+      //for (String dif : differences) {
+        // differencesNames = differencesNames.append(Component.text(dif+", "));
+    //  }
       
       refreshedMessage = Component.text("Cosmetics Reloaded!")
               .color(TextColor.color(YELLOW));
       
-      return refreshedMessage.append(differencesMessage).append(differencesNames);
+      //return refreshedMessage.append(differencesMessage).append(differencesNames);
+      return differencesNames;
    }
    
    /**
@@ -74,7 +74,7 @@ public class Util {
     * @return     Null if Byte does not exist, otherwise returns Byte
     */
    public static @Nullable Byte getCosmeticByte(ItemStack item) {
-      NamespacedKey typeKey = new NamespacedKey(Cosmetics.getInstance(), "cosmetic-type");
+      NamespacedKey typeKey = new NamespacedKey(PlayerCosmetics.getInstance(), "cosmetic-type");
       PersistentDataContainer metaContainer;
       
       if(item != null && item.hasItemMeta()) {
@@ -91,7 +91,7 @@ public class Util {
     * @return     Null if String does not exist, otherwise returns String
     */
    public static @Nullable String getCosmeticString(ItemStack item) {
-      NamespacedKey nameKey = new NamespacedKey(Cosmetics.getInstance(), "cosmetic-name");
+      NamespacedKey nameKey = new NamespacedKey(PlayerCosmetics.getInstance(), "cosmetic-name");
       PersistentDataContainer metaContainer;
    
       if(item != null && item.hasItemMeta()) {
@@ -108,8 +108,8 @@ public class Util {
     * @return     Cosmetic from InternalName, null if none found.
     */
    
-   public @Nullable static Cosmetic getCosmeticFromName(String name) {
-      for (Cosmetic cosmetic : Cosmetics.getCachedCosmeticList()) {
+   public @Nullable static Cosmetics getCosmeticFromName(String name) {
+      for (Cosmetics cosmetic : PlayerCosmetics.getCachedCosmeticList()) {
          if(cosmetic.getInternalName().equals(name)) { //probably inefficient for large amounts of cosmetics?
             return cosmetic;
          }

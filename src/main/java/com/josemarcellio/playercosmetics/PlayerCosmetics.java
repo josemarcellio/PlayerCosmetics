@@ -1,13 +1,11 @@
 package com.josemarcellio.playercosmetics;
 
-import com.josemarcellio.playercosmetics.commands.GiveCosmetic;
-import com.josemarcellio.playercosmetics.commands.GiveCosmeticTabComplete;
-import com.josemarcellio.playercosmetics.commands.RefreshCosmeticsList;
-import com.josemarcellio.playercosmetics.listeners.ArmorSlotClickListener;
-import com.josemarcellio.playercosmetics.listeners.RightClickEventListener;
-import com.josemarcellio.playercosmetics.summon.CosmeticFactory;
-import com.josemarcellio.playercosmetics.util.Cosmetic;
-import org.bstats.bukkit.Metrics;
+import com.josemarcellio.playercosmetics.commands.CosmeticsCommand;
+import com.josemarcellio.playercosmetics.commands.CosmeticsReload;
+import com.josemarcellio.playercosmetics.listeners.ClickCosmetics;
+import com.josemarcellio.playercosmetics.manager.PlayerCosmeticsManager;
+import com.josemarcellio.playercosmetics.metrics.Metrics;
+import com.josemarcellio.playercosmetics.utils.Cosmetics;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -16,11 +14,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
-public class Cosmetics extends JavaPlugin {
-   private static Cosmetics instance;
-   private static CosmeticFactory cosmeticFactory;
-   private static List<Cosmetic> cosmeticList;
+public class PlayerCosmetics extends JavaPlugin {
+   private static PlayerCosmetics instance;
+   private static PlayerCosmeticsManager cosmeticFactory;
+   private static List<Cosmetics> cosmeticList;
    
    private static FileConfiguration cosmetics;
    private static File cosmeticsFile;
@@ -33,18 +32,16 @@ public class Cosmetics extends JavaPlugin {
       this.createCosmetics();
       
       if(cosmeticFactory == null) {
-         cosmeticFactory = new CosmeticFactory();
+         cosmeticFactory = new PlayerCosmeticsManager();
          cosmeticList = cosmeticFactory.getCosmeticsFromConfig();
       }
-      int pluginId = 12993;
-      Metrics metrics = new Metrics(this,pluginId);
+
+      new Metrics (this, 13060);
       
       // probably a good idea to eventually move these elsewhere to work as a method
-      this.getCommand("givecosmetic").setExecutor(new GiveCosmetic());
-      this.getCommand("givecosmetic").setTabCompleter(new GiveCosmeticTabComplete());
-      this.getCommand("refreshcosmetics").setExecutor(new RefreshCosmeticsList());
-      getServer().getPluginManager().registerEvents(new RightClickEventListener(), this);
-      getServer().getPluginManager().registerEvents(new ArmorSlotClickListener(), this);
+      Objects.requireNonNull ( this.getCommand ( "playercosmeticsgive" ) ).setExecutor(new CosmeticsCommand ());
+      Objects.requireNonNull ( this.getCommand ( "playercosmeticsreload" ) ).setExecutor(new CosmeticsReload ());
+      getServer().getPluginManager().registerEvents(new ClickCosmetics(), this);
    }
    
    @Override
@@ -52,20 +49,20 @@ public class Cosmetics extends JavaPlugin {
    }
    
    public static JavaPlugin getInstance() { return instance; }
-   public static CosmeticFactory getCosmeticFactory() { return cosmeticFactory; }
+   public static PlayerCosmeticsManager getCosmeticFactory() { return cosmeticFactory; }
    
    /**
     * Get cached List of Cosmetic's. Use CosmeticFactory#getCosmeticsFromConfig() for a non-cached list!
     * @return List of cached (read from config at load) Cosmetic's
     */
-   public static List<Cosmetic> getCachedCosmeticList() { return cosmeticList; }
+   public static List<Cosmetics> getCachedCosmeticList() { return cosmeticList; }
    
    /**
     * Called from CosmeticFactory#getCosmeticsFromConfig(), refreshes cache and updates cosmetic list if new ones are found
     * in the config!
     * @param cList List of Cosmetic's from CosmeticFactory#getCosmeticsFromConfig()
     */
-   public static void setCachedCosmeticList(List<Cosmetic> cList) { cosmeticList = cList;}
+   public static void setCachedCosmeticList(List<Cosmetics> cList) { cosmeticList = cList;}
    
    /**
     * Return cosmetics.yml FileConfiguration.
