@@ -80,19 +80,6 @@ public class PlayerCosmeticsManager {
         return cosmeticNames;
     }
 
-    public void equipCosmetic(Player player, ItemStack item, EquipmentSlot slot) {
-        if(PlayerCosmeticsUtils.isCosmetic(item)) {
-            Cosmetics cosmetic = Cosmetics.getCosmeticFromItemStack(item);
-            CosmeticsEnum cosmeticType = Objects.requireNonNull ( cosmetic ).getType();
-            PlayerInventory inv = player.getInventory();
-
-            if (inv.getItem(36 + cosmeticType.getID()) == null && cosmeticType != CosmeticsEnum.CANNOT) { //dont switch inventory items
-                inv.setItem(36 + cosmeticType.getID(), item);
-                inv.setItem(slot,null);
-            }
-            //Could *re-*make something that switches two cosmetics, but thats not vanilla behaviour ;)
-        }
-    }
 
     /**
      * Equip a cosmetic from slot click event, if an item is already present, switch items on cursor and slot
