@@ -4,9 +4,6 @@ import com.josemarcellio.playercosmetics.PlayerCosmetics;
 import com.josemarcellio.playercosmetics.enums.CosmeticsEnum;
 import com.josemarcellio.playercosmetics.utils.Cosmetics;
 import com.josemarcellio.playercosmetics.utils.PlayerCosmeticsUtils;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.format.TextColor;
-import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -44,11 +41,11 @@ public class PlayerCosmeticsManager {
         FileConfiguration config = PlayerCosmetics.getCosmetics();
 
         for (String internalname : Objects.requireNonNull ( config.getConfigurationSection ( "PlayerCosmetics" ) ).getKeys(false)) {
-            Component name;
+            String name;
             Integer modelID;
             Material material;
             List<String> lore;
-            List<Component> formattedLore;
+            List<String> formattedLore;
             CosmeticsEnum type;
             Map<String,Object> valuesmap;
 
@@ -58,7 +55,7 @@ public class PlayerCosmeticsManager {
             lore = new ArrayList<>();
             formattedLore = new ArrayList<>();
             valuesmap = Objects.requireNonNull ( config.getConfigurationSection ( "PlayerCosmetics." + internalname ) ).getValues(false);
-            name = Component.text((String) valuesmap.get("name"));
+            name = (String) valuesmap.get("name");
             modelID = (Integer) valuesmap.get("modeldata");
             type = CosmeticsEnum.valueOf((String)valuesmap.get("canequip"));
 
@@ -67,11 +64,7 @@ public class PlayerCosmeticsManager {
 
             if (valuesmap.get("lore") instanceof List) lore = (List<String>) valuesmap.get("lore");
 
-            lore.forEach((String stg) -> formattedLore.add(
-                    Component.text(stg)
-                            .color(TextColor.color(170, 170, 170))
-                            .decoration(TextDecoration.ITALIC,false)
-            ));
+            lore.forEach((String stg) -> formattedLore.add(stg));
 
             Cosmetics cosmetic = new Cosmetics(internalname,name,modelID,material,formattedLore,type);
             cosmeticsList.add(cosmetic);

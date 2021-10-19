@@ -1,61 +1,13 @@
 package com.josemarcellio.playercosmetics.utils;
 
 import com.josemarcellio.playercosmetics.PlayerCosmetics;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static net.kyori.adventure.text.format.NamedTextColor.YELLOW;
-
 public class PlayerCosmeticsUtils {
-   
-   /**
-    * Refreshes cosmetics list. Used by RefreshCosmeticsList command
-    *
-    * @return User-friendly text Component with list of new cosmetics found
-    */
-   public static Component getUserFriendlyRefreshedCosmeticsList() {
-      List<String> oldList;
-      List<String> newList;
-      List<String> differences;
-      Component differencesNames;
-      Component differencesMessage;
-      Component refreshedMessage;
-      
-      oldList = new ArrayList<>();
-      newList = new ArrayList<>();
-      PlayerCosmetics.getCachedCosmeticList().forEach((Cosmetics csm) -> oldList.add( String.valueOf ( csm.getCosmeticName() ) ));
-      PlayerCosmetics.getCosmeticFactory().getCosmeticsFromConfig().forEach((Cosmetics csm) -> newList.add( String.valueOf ( csm.getCosmeticName() ) ));
-      //Horrible.
-      
-      if(oldList.toArray().length < newList.toArray().length) {
-         differences = new ArrayList<>(newList);
-         differences.removeAll(oldList);
-         differencesMessage = Component.text("Cosmetics Reloaded!")
-                 .color(TextColor.color(YELLOW));
-      //} else {
-        // differencesMessage = Component.text("");
-         //differences = new ArrayList<>();
-      }
-      
-      differencesNames = Component.text("Cosmetics Reloaded!").color(TextColor.color(YELLOW));
-      //for (String dif : differences) {
-        // differencesNames = differencesNames.append(Component.text(dif+", "));
-    //  }
-      
-      refreshedMessage = Component.text("Cosmetics Reloaded!")
-              .color(TextColor.color(YELLOW));
-      
-      //return refreshedMessage.append(differencesMessage).append(differencesNames);
-      return differencesNames;
-   }
    
    /**
     * Returns whether a provided ItemStack is a Cosmetic or not.

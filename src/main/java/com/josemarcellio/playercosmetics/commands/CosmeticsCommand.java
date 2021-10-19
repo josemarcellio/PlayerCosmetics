@@ -2,9 +2,6 @@ package com.josemarcellio.playercosmetics.commands;
 
 import com.josemarcellio.playercosmetics.utils.Cosmetics;
 import com.josemarcellio.playercosmetics.utils.PlayerCosmeticsUtils;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.format.TextColor;
-import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -13,9 +10,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
-
-import static net.kyori.adventure.text.format.NamedTextColor.GOLD;
-import static net.kyori.adventure.text.format.NamedTextColor.YELLOW;
 
 /**
  * Basically a testing command to give the specified Cosmetic to the player
@@ -51,13 +45,10 @@ public class CosmeticsCommand implements CommandExecutor {
 
             cosmeticItem = cosmetic.getCosmeticItemStack();
             toPlayer.getInventory().addItem(cosmeticItem);
-            Component gave = Component.text("Give cosmetics").color(YELLOW)
-                    .append(Component.text(" to ").color(TextColor.color(YELLOW))
-                            .append(Component.text(toPlayer.getName()).color(TextColor.color(GOLD))));
             if(PlayerCosmeticsUtils.isSpigot()) {
-                sender.sendMessage(LegacyComponentSerializer.builder().build().serialize(gave));
+                //sender.sendMessage(LegacyComponentSerializer.builder().build().serialize(gave));
             } else {
-                sender.sendMessage(gave);
+                //sender.sendMessage(gave);
             }
             return true;
         }

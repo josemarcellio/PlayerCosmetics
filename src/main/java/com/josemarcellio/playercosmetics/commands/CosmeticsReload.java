@@ -1,7 +1,8 @@
 package com.josemarcellio.playercosmetics.commands;
 
+import com.josemarcellio.playercosmetics.manager.PlayerCosmeticsManager;
 import com.josemarcellio.playercosmetics.utils.PlayerCosmeticsUtils;
-import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -13,9 +14,13 @@ public class CosmeticsReload implements CommandExecutor {
         if(sender.hasPermission("playercosmetics.admin")) {
             //sender.sendMessage(ChatColor.YELLOW + "Cosmetics Reloaded!");
             if(PlayerCosmeticsUtils.isSpigot()) {
-                sender.sendMessage(LegacyComponentSerializer.builder().build().serialize(PlayerCosmeticsUtils.getUserFriendlyRefreshedCosmeticsList()));
+               // sender.sendMessage(LegacyComponentSerializer.builder().build().serialize(PlayerCosmeticsUtils.getUserFriendlyRefreshedCosmeticsList()));
+                new PlayerCosmeticsManager().getCosmeticsFromConfig();
+                sender.sendMessage( ChatColor.translateAlternateColorCodes ('&', "&eConfig Reloaded!"));
             } else {
-                sender.sendMessage(PlayerCosmeticsUtils.getUserFriendlyRefreshedCosmeticsList());
+                //sender.sendMessage(PlayerCosmeticsUtils.getUserFriendlyRefreshedCosmeticsList());
+                new PlayerCosmeticsManager().getCosmeticsFromConfig();
+                sender.sendMessage( ChatColor.translateAlternateColorCodes ('&', "&eConfig Reloaded!"));
             }
             return true;
         }
