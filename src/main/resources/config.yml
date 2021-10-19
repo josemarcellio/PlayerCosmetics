@@ -1,3 +1,16 @@
+#canequip: CAN or CANNOT
+#you can create unlimited cosmetics, just copy paste and change
+#example:
+#
+#1:
+#  name: '&eScientist Static Head'
+#  material: PAPER
+#  modeldata: 2049
+#  lore:
+#    - ""
+#    - "&6&nExample"
+#  canequip: CAN
+
 PlayerCosmetics:
   1:
     name: '&eScientist Static Head'
@@ -22,7 +35,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   4:
     name: '&eTraveler Stick'
     material: PAPER
@@ -30,7 +43,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   5:
     name: '&eFarmer Head'
     material: PAPER
@@ -54,7 +67,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   8:
     name: '&eSporent Head'
     material: PAPER
@@ -94,7 +107,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   13:
     name: '&eButterfly'
     material: PAPER
@@ -102,7 +115,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   14:
     name: '&eButterfly 2'
     material: PAPER
@@ -110,7 +123,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   15:
     name: '&eClover Staff'
     material: PAPER
@@ -118,7 +131,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   16:
     name: '&eClover Umbrella'
     material: PAPER
@@ -126,15 +139,15 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   17:
-    name: '&eClover Umbrella'
+    name: '&eClover Umbrella 2'
     material: PAPER
     modeldata: 3060
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   18:
     name: '&eRainbow Ear Muffs'
     material: PAPER
@@ -166,7 +179,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   22:
     name: '&eBouquet'
     material: PAPER
@@ -174,7 +187,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   23:
     name: '&eCupid Wings'
     material: PAPER
@@ -190,7 +203,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   25:
     name: '&ePirate Hook'
     material: PAPER
@@ -198,7 +211,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   26:
     name: '&ePirate Hat'
     material: PAPER
@@ -246,7 +259,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   32:
     name: '&eDino Claw'
     material: PAPER
@@ -254,7 +267,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   33:
     name: '&eBaseball Cap'
     material: PAPER
@@ -270,7 +283,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   35:
     name: '&eBook'
     material: PAPER
@@ -278,7 +291,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   36:
     name: '&eBook 2'
     material: PAPER
@@ -286,7 +299,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
-    canequip: CAN
+    canequip: CANNOT
   37:
     name: '&eHair'
     material: PAPER
