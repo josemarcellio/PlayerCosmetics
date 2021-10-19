@@ -60,7 +60,7 @@ public class PlayerCosmeticsManager {
             valuesmap = Objects.requireNonNull ( config.getConfigurationSection ( "PlayerCosmetics." + internalname ) ).getValues(false);
             name = Component.text((String) valuesmap.get("name"));
             modelID = (Integer) valuesmap.get("modeldata");
-            type = CosmeticsEnum.HAT;
+            type = CosmeticsEnum.valueOf((String)valuesmap.get("canequip"));
 
             if(valuesmap.get("material") != null) material = Material.matchMaterial(valuesmap.get("material").toString());
             else material = Material.PAPER;
@@ -93,7 +93,7 @@ public class PlayerCosmeticsManager {
             CosmeticsEnum cosmeticType = Objects.requireNonNull ( cosmetic ).getType();
             PlayerInventory inv = player.getInventory();
 
-            if (inv.getItem(36 + cosmeticType.getID()) == null && cosmeticType != CosmeticsEnum.INVENTORY_ITEM) { //dont switch inventory items
+            if (inv.getItem(36 + cosmeticType.getID()) == null && cosmeticType != CosmeticsEnum.CANNOT) { //dont switch inventory items
                 inv.setItem(36 + cosmeticType.getID(), item);
                 inv.setItem(slot,null);
             }

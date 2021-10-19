@@ -6,6 +6,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   2:
     name: '&eTraveler Head'
     material: PAPER
@@ -13,6 +14,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   3:
     name: '&eTraveler Backpack'
     material: PAPER
@@ -20,6 +22,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   4:
     name: '&eTraveler Stick'
     material: PAPER
@@ -27,6 +30,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   5:
     name: '&eFarmer Head'
     material: PAPER
@@ -34,6 +38,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   6:
     name: '&eFarmer Head Light'
     material: PAPER
@@ -41,6 +46,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   7:
     name: '&eFarmer Basket'
     material: PAPER
@@ -48,6 +54,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   8:
     name: '&eSporent Head'
     material: PAPER
@@ -55,6 +62,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   9:
     name: '&eBalloon Conductor Head'
     material: PAPER
@@ -62,6 +70,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   10:
     name: '&eWood Worker Head'
     material: PAPER
@@ -69,6 +78,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   11:
     name: '&eScientist Head'
     material: PAPER
@@ -76,6 +86,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   12:
     name: '&eScientist Arm'
     material: PAPER
@@ -83,6 +94,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   13:
     name: '&eButterfly'
     material: PAPER
@@ -90,6 +102,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   14:
     name: '&eButterfly 2'
     material: PAPER
@@ -97,6 +110,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   15:
     name: '&eClover Staff'
     material: PAPER
@@ -104,6 +118,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   16:
     name: '&eClover Umbrella'
     material: PAPER
@@ -111,6 +126,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   17:
     name: '&eClover Umbrella'
     material: PAPER
@@ -118,6 +134,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   18:
     name: '&eRainbow Ear Muffs'
     material: PAPER
@@ -125,6 +142,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   19:
     name: '&eLeprechaun Hat'
     material: PAPER
@@ -132,6 +150,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   20:
     name: '&eHeart Top Hat'
     material: PAPER
@@ -139,6 +158,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   21:
     name: '&eHeart Staff'
     material: PAPER
@@ -146,6 +166,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   22:
     name: '&eBouquet'
     material: PAPER
@@ -153,6 +174,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   23:
     name: '&eCupid Wings'
     material: PAPER
@@ -160,6 +182,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   24:
     name: '&ePirate Chest'
     material: PAPER
@@ -167,6 +190,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   25:
     name: '&ePirate Hook'
     material: PAPER
@@ -174,6 +198,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   26:
     name: '&ePirate Hat'
     material: PAPER
@@ -181,6 +206,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   27:
     name: '&eSaxophone Hat'
     material: PAPER
@@ -188,6 +214,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   28:
     name: '&eFedora'
     material: PAPER
@@ -195,6 +222,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   29:
     name: '&eDino Helmet'
     material: PAPER
@@ -202,6 +230,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   30:
     name: '&eDino Helmet'
     material: PAPER
@@ -209,6 +238,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   31:
     name: '&eDino Claw'
     material: PAPER
@@ -216,6 +246,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   32:
     name: '&eDino Claw'
     material: PAPER
@@ -223,6 +254,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   33:
     name: '&eBaseball Cap'
     material: PAPER
@@ -230,6 +262,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   34:
     name: '&eMarshmallow Stick'
     material: PAPER
@@ -237,6 +270,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   35:
     name: '&eBook'
     material: PAPER
@@ -244,6 +278,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   36:
     name: '&eBook 2'
     material: PAPER
@@ -251,6 +286,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   37:
     name: '&eHair'
     material: PAPER
@@ -258,6 +294,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   38:
     name: '&eHair 2'
     material: PAPER
@@ -265,6 +302,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   39:
     name: '&eHair 3'
     material: PAPER
@@ -272,6 +310,7 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN
   40:
     name: '&eHair 4'
     material: PAPER
@@ -279,3 +318,4 @@ PlayerCosmetics:
     lore:
       - ""
       - "&6&nExample"
+    canequip: CAN

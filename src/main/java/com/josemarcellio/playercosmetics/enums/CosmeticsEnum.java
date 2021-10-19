@@ -9,8 +9,8 @@ import java.util.Optional;
  */
 
 public enum CosmeticsEnum {
-    INVENTORY_ITEM ((byte)4),
-    HAT ((byte)3);
+    CANNOT ((byte)4),
+    CAN ((byte)3);
 
     private final byte id;
     CosmeticsEnum(byte i) {
