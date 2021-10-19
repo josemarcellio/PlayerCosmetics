@@ -37,7 +37,11 @@ public class PlayerCosmetics extends JavaPlugin {
       }
 
       new Metrics (this, 13060);
-      
+      this.getLogger ().info ( "---------------------------------------------" );
+      this.getLogger ().info ( "" );
+      this.getLogger ().info ( "   PlayerCosmetics by JoseMarcellio" );
+      this.getLogger ().info ( "" );
+      this.getLogger ().info ( "---------------------------------------------" );
       // probably a good idea to eventually move these elsewhere to work as a method
       Objects.requireNonNull ( this.getCommand ( "playercosmeticsgive" ) ).setExecutor(new CosmeticsCommand ());
       Objects.requireNonNull ( this.getCommand ( "playercosmeticsreload" ) ).setExecutor(new CosmeticsReload ());
@@ -46,6 +50,7 @@ public class PlayerCosmetics extends JavaPlugin {
    
    @Override
    public void onDisable() {
+      this.getLogger ().info ( "Disabling PlayerCosmetics" );
    }
    
    public static JavaPlugin getInstance() { return instance; }

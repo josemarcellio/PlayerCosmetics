@@ -1,29 +1,281 @@
 PlayerCosmetics:
   1:
-    name: '&eEar Cat'
-    material: FEATHER
-    modeldata: 12
+    name: '&eScientist Static Head'
+    material: PAPER
+    modeldata: 2049
     lore:
       - ""
       - "&6&nExample"
   2:
-    name: '&eBlack Wing'
-    material: FEATHER
-    modeldata: 18
+    name: '&eTraveler Head'
+    material: PAPER
+    modeldata: 2050
     lore:
       - ""
       - "&6&nExample"
   3:
-    name: '&eDragon Wing'
-    material: FEATHER
-    modeldata: 22
+    name: '&eTraveler Backpack'
+    material: PAPER
+    modeldata: 2051
     lore:
       - ""
       - "&6&nExample"
   4:
-    name: '&eTail'
-    material: FEATHER
-    modeldata: 20
+    name: '&eTraveler Stick'
+    material: PAPER
+    modeldata: 2052
+    lore:
+      - ""
+      - "&6&nExample"
+  5:
+    name: '&eFarmer Head'
+    material: PAPER
+    modeldata: 2053
+    lore:
+      - ""
+      - "&6&nExample"
+  6:
+    name: '&eFarmer Head Light'
+    material: PAPER
+    modeldata: 2054
+    lore:
+      - ""
+      - "&6&nExample"
+  7:
+    name: '&eFarmer Basket'
+    material: PAPER
+    modeldata: 2055
+    lore:
+      - ""
+      - "&6&nExample"
+  8:
+    name: '&eSporent Head'
+    material: PAPER
+    modeldata: 2056
+    lore:
+      - ""
+      - "&6&nExample"
+  9:
+    name: '&eBalloon Conductor Head'
+    material: PAPER
+    modeldata: 2057
+    lore:
+      - ""
+      - "&6&nExample"
+  10:
+    name: '&eWood Worker Head'
+    material: PAPER
+    modeldata: 2058
+    lore:
+      - ""
+      - "&6&nExample"
+  11:
+    name: '&eScientist Head'
+    material: PAPER
+    modeldata: 2047
+    lore:
+      - ""
+      - "&6&nExample"
+  12:
+    name: '&eScientist Arm'
+    material: PAPER
+    modeldata: 2048
+    lore:
+      - ""
+      - "&6&nExample"
+  13:
+    name: '&eButterfly'
+    material: PAPER
+    modeldata: 2065
+    lore:
+      - ""
+      - "&6&nExample"
+  14:
+    name: '&eButterfly 2'
+    material: PAPER
+    modeldata: 2066
+    lore:
+      - ""
+      - "&6&nExample"
+  15:
+    name: '&eClover Staff'
+    material: PAPER
+    modeldata: 10071
+    lore:
+      - ""
+      - "&6&nExample"
+  16:
+    name: '&eClover Umbrella'
+    material: PAPER
+    modeldata: 10070
+    lore:
+      - ""
+      - "&6&nExample"
+  17:
+    name: '&eClover Umbrella'
+    material: PAPER
+    modeldata: 3060
+    lore:
+      - ""
+      - "&6&nExample"
+  18:
+    name: '&eRainbow Ear Muffs'
+    material: PAPER
+    modeldata: 10069
+    lore:
+      - ""
+      - "&6&nExample"
+  19:
+    name: '&eLeprechaun Hat'
+    material: PAPER
+    modeldata: 10067
+    lore:
+      - ""
+      - "&6&nExample"
+  20:
+    name: '&eHeart Top Hat'
+    material: PAPER
+    modeldata: 10066
+    lore:
+      - ""
+      - "&6&nExample"
+  21:
+    name: '&eHeart Staff'
+    material: PAPER
+    modeldata: 10065
+    lore:
+      - ""
+      - "&6&nExample"
+  22:
+    name: '&eBouquet'
+    material: PAPER
+    modeldata: 10064
+    lore:
+      - ""
+      - "&6&nExample"
+  23:
+    name: '&eCupid Wings'
+    material: PAPER
+    modeldata: 10061
+    lore:
+      - ""
+      - "&6&nExample"
+  24:
+    name: '&ePirate Chest'
+    material: PAPER
+    modeldata: 10048
+    lore:
+      - ""
+      - "&6&nExample"
+  25:
+    name: '&ePirate Hook'
+    material: PAPER
+    modeldata: 10047
+    lore:
+      - ""
+      - "&6&nExample"
+  26:
+    name: '&ePirate Hat'
+    material: PAPER
+    modeldata: 10046
+    lore:
+      - ""
+      - "&6&nExample"
+  27:
+    name: '&eSaxophone Hat'
+    material: PAPER
+    modeldata: 10045
+    lore:
+      - ""
+      - "&6&nExample"
+  28:
+    name: '&eFedora'
+    material: PAPER
+    modeldata: 10044
+    lore:
+      - ""
+      - "&6&nExample"
+  29:
+    name: '&eDino Helmet'
+    material: PAPER
+    modeldata: 10040
+    lore:
+      - ""
+      - "&6&nExample"
+  30:
+    name: '&eDino Helmet'
+    material: PAPER
+    modeldata: 10040
+    lore:
+      - ""
+      - "&6&nExample"
+  31:
+    name: '&eDino Claw'
+    material: PAPER
+    modeldata: 10042
+    lore:
+      - ""
+      - "&6&nExample"
+  32:
+    name: '&eDino Claw'
+    material: PAPER
+    modeldata: 10042
+    lore:
+      - ""
+      - "&6&nExample"
+  33:
+    name: '&eBaseball Cap'
+    material: PAPER
+    modeldata: 10002
+    lore:
+      - ""
+      - "&6&nExample"
+  34:
+    name: '&eMarshmallow Stick'
+    material: PAPER
+    modeldata: 10003
+    lore:
+      - ""
+      - "&6&nExample"
+  35:
+    name: '&eBook'
+    material: PAPER
+    modeldata: 1002
+    lore:
+      - ""
+      - "&6&nExample"
+  36:
+    name: '&eBook 2'
+    material: PAPER
+    modeldata: 1003
+    lore:
+      - ""
+      - "&6&nExample"
+  37:
+    name: '&eHair'
+    material: PAPER
+    modeldata: 10019
+    lore:
+      - ""
+      - "&6&nExample"
+  38:
+    name: '&eHair 2'
+    material: PAPER
+    modeldata: 10018
+    lore:
+      - ""
+      - "&6&nExample"
+  39:
+    name: '&eHair 3'
+    material: PAPER
+    modeldata: 10021
+    lore:
+      - ""
+      - "&6&nExample"
+  40:
+    name: '&eHair 4'
+    material: PAPER
+    modeldata: 10020
     lore:
       - ""
       - "&6&nExample"

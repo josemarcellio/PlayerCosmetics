@@ -1,5 +1,5 @@
 name: PlayerCosmetics
-version: ${project.version}
+version: 1.1
 main: com.josemarcellio.playercosmetics.PlayerCosmetics
 authors: [JoseMarcellio]
 description: PlayerCosmetics plugin

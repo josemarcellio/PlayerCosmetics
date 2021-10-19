@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class PlayerCosmeticsManager {
     private final ArrayList<String> cosmeticNames;
@@ -42,7 +43,7 @@ public class PlayerCosmeticsManager {
         PlayerCosmetics.refreshCosmetics();
         FileConfiguration config = PlayerCosmetics.getCosmetics();
 
-        for (String internalname : config.getConfigurationSection("PlayerCosmetics").getKeys(false)) {
+        for (String internalname : Objects.requireNonNull ( config.getConfigurationSection ( "PlayerCosmetics" ) ).getKeys(false)) {
             Component name;
             Integer modelID;
             Material material;
@@ -56,7 +57,7 @@ public class PlayerCosmeticsManager {
 
             lore = new ArrayList<>();
             formattedLore = new ArrayList<>();
-            valuesmap = config.getConfigurationSection("PlayerCosmetics."+internalname).getValues(false);
+            valuesmap = Objects.requireNonNull ( config.getConfigurationSection ( "PlayerCosmetics." + internalname ) ).getValues(false);
             name = Component.text((String) valuesmap.get("name"));
             modelID = (Integer) valuesmap.get("modeldata");
             type = CosmeticsEnum.HAT;
@@ -89,7 +90,7 @@ public class PlayerCosmeticsManager {
     public void equipCosmetic(Player player, ItemStack item, EquipmentSlot slot) {
         if(PlayerCosmeticsUtils.isCosmetic(item)) {
             Cosmetics cosmetic = Cosmetics.getCosmeticFromItemStack(item);
-            CosmeticsEnum cosmeticType = cosmetic.getType();
+            CosmeticsEnum cosmeticType = Objects.requireNonNull ( cosmetic ).getType();
             PlayerInventory inv = player.getInventory();
 
             if (inv.getItem(36 + cosmeticType.getID()) == null && cosmeticType != CosmeticsEnum.INVENTORY_ITEM) { //dont switch inventory items
@@ -114,7 +115,7 @@ public class PlayerCosmeticsManager {
     public void equipCosmeticFromSlotClick(HumanEntity player, Inventory inv, ItemStack inSlot, ItemStack cursor, int slotInt) {
         if(PlayerCosmeticsUtils.isCosmetic(cursor)) {
             Cosmetics cosmetic = Cosmetics.getCosmeticFromItemStack(cursor);
-            CosmeticsEnum cosmeticType = cosmetic.getType();
+            CosmeticsEnum cosmeticType = Objects.requireNonNull ( cosmetic ).getType();
 
             if (slotInt == 36 + cosmeticType.getID()) {
                 /*verify that the cosmetic-type matches armor slot & slot type*/
@@ -137,18 +138,18 @@ public class PlayerCosmeticsManager {
      * @param slot             Slot where shiftClickedItem was shift-clicked from
      */
 
-    public void equipCosmeticFromShiftClick(ItemStack shiftClickedItem, Inventory inv, int slot) {
-        if(PlayerCosmeticsUtils.isCosmetic(shiftClickedItem)) {
-            CosmeticsEnum cosmeticType = Cosmetics.getCosmeticFromItemStack(shiftClickedItem).getType();
+   // public void equipCosmeticFromShiftClick(ItemStack shiftClickedItem, Inventory inv, int slot) {
+     //   if(PlayerCosmeticsUtils.isCosmetic(shiftClickedItem)) {
+       //     CosmeticsEnum cosmeticType = Objects.requireNonNull ( Cosmetics.getCosmeticFromItemStack ( shiftClickedItem ) ).getType();
 
-            ItemStack itemInSlot = inv.getItem(36 + cosmeticType.getID());
-            int slotInt = 36 + cosmeticType.getID();
+          //  ItemStack itemInSlot = inv.getItem(36 + cosmeticType.getID());
+          //  int slotInt = 36 + cosmeticType.getID();
 
-            if (itemInSlot == null || itemInSlot.equals(new ItemStack(Material.AIR))) {
-                inv.setItem(slotInt, shiftClickedItem);
-                inv.setItem(slot, null);
-            }
-        }
-    }
+        //    if (itemInSlot == null || itemInSlot.equals(new ItemStack(Material.AIR))) {
+          //      inv.setItem(slotInt, shiftClickedItem);
+        //        inv.setItem(slot, null);
+      //      }
+     //   }
+   // }
 
 }
