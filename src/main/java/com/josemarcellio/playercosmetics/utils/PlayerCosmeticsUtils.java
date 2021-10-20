@@ -68,6 +68,15 @@ public class PlayerCosmeticsUtils {
       }
       return null;
    }
+
+   public static boolean isInt(String s) {
+      try {
+         Integer.parseInt(s);
+      } catch (NumberFormatException nfe) {
+         return false;
+      }
+      return true;
+   }
    
    public static boolean isSpigot() {
       try {

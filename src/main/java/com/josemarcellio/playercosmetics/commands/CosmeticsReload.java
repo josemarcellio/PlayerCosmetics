@@ -13,16 +13,10 @@ public class CosmeticsReload implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(sender.hasPermission("playercosmetics.admin")) {
             //sender.sendMessage(ChatColor.YELLOW + "Cosmetics Reloaded!");
-            if(PlayerCosmeticsUtils.isSpigot()) {
                // sender.sendMessage(LegacyComponentSerializer.builder().build().serialize(PlayerCosmeticsUtils.getUserFriendlyRefreshedCosmeticsList()));
                 new PlayerCosmeticsManager().getCosmeticsFromConfig();
                 sender.sendMessage( ChatColor.translateAlternateColorCodes ('&', "&eConfig Reloaded!"));
-            } else {
-                //sender.sendMessage(PlayerCosmeticsUtils.getUserFriendlyRefreshedCosmeticsList());
-                new PlayerCosmeticsManager().getCosmeticsFromConfig();
-                sender.sendMessage( ChatColor.translateAlternateColorCodes ('&', "&eConfig Reloaded!"));
-            }
-            return true;
+
         }
         return false;
     }

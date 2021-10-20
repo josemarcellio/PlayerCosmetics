@@ -42,15 +42,9 @@ public class CosmeticsCommand implements CommandExecutor {
                 sender.sendMessage(ChatColor.YELLOW + "Cosmetics not found!");
                 return true;
             }
-
             cosmeticItem = cosmetic.getCosmeticItemStack();
             toPlayer.getInventory().addItem(cosmeticItem);
-            if(PlayerCosmeticsUtils.isSpigot()) {
-                //sender.sendMessage(LegacyComponentSerializer.builder().build().serialize(gave));
-            } else {
-                //sender.sendMessage(gave);
-            }
-            return true;
+            sender.sendMessage( net.md_5.bungee.api.ChatColor.translateAlternateColorCodes ('&', "&eCosmetics send to " + toPlayer.getName()));
         }
         return false;
     }

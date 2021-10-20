@@ -1,13 +1,10 @@
 package com.josemarcellio.playercosmetics.listeners;
 
 import com.josemarcellio.playercosmetics.manager.PlayerCosmeticsManager;
-import com.josemarcellio.playercosmetics.utils.PlayerCosmeticsUtils;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 
 /**

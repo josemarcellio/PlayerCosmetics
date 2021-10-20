@@ -11,3 +11,6 @@ commands:
   playercosmeticsreload:
     aliases: [pcr, cosmeticsreload]
     description: Reload Cosmetics
+  playercosmeticsset:
+    aliases: [pcs, cosmeticsset]
+    description: Set Cosmetics
