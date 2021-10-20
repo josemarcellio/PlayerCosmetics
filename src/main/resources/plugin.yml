@@ -1,16 +1,10 @@
 name: PlayerCosmetics
-version: 1.3
+version: 1.4
 main: com.josemarcellio.playercosmetics.PlayerCosmetics
 authors: [JoseMarcellio]
 description: PlayerCosmetics plugin
 
 commands:
-  playercosmeticsgive:
-    aliases: [pcg, cosmeticsgive]
-    description: Give Cosmetics
-  playercosmeticsreload:
-    aliases: [pcr, cosmeticsreload]
-    description: Reload Cosmetics
-  playercosmeticsset:
+  playercosmetics:
     aliases: [pcs, cosmeticsset]
     description: Set Cosmetics

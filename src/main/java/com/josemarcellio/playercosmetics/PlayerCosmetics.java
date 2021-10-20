@@ -1,8 +1,6 @@
 package com.josemarcellio.playercosmetics;
 
-import com.josemarcellio.playercosmetics.commands.CosmeticsCommand;
-import com.josemarcellio.playercosmetics.commands.CosmeticsReload;
-import com.josemarcellio.playercosmetics.commands.CosmeticsSet;
+import com.josemarcellio.playercosmetics.commands.PlayerCosmeticsCommand;
 import com.josemarcellio.playercosmetics.listeners.ClickCosmetics;
 import com.josemarcellio.playercosmetics.manager.PlayerCosmeticsManager;
 import com.josemarcellio.playercosmetics.metrics.Metrics;
@@ -44,9 +42,7 @@ public class PlayerCosmetics extends JavaPlugin {
       this.getLogger ().info ( "" );
       this.getLogger ().info ( "---------------------------------------------" );
       // probably a good idea to eventually move these elsewhere to work as a method
-      Objects.requireNonNull ( this.getCommand ( "playercosmeticsgive" ) ).setExecutor(new CosmeticsCommand ());
-      Objects.requireNonNull ( this.getCommand ( "playercosmeticsreload" ) ).setExecutor(new CosmeticsReload ());
-      Objects.requireNonNull ( this.getCommand ( "playercosmeticsset" ) ).setExecutor(new CosmeticsSet ());
+      Objects.requireNonNull ( this.getCommand ( "playercosmetics" ) ).setExecutor(new PlayerCosmeticsCommand ());
       getServer().getPluginManager().registerEvents(new ClickCosmetics(), this);
    }
    
